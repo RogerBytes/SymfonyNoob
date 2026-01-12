@@ -21,16 +21,18 @@ docker stop $(docker ps -q)
 docker ps
 ```
 
-## Connexion au conteneur
+## Initialisation des droits du conteneur
 
-Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob` donc
+Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob`, on va donner les droits d'accès à la pile.
+Il faudra lancer ces commande une fois par ordinateur.
 
 ```bash
 docker exec -it php_symfony_noob bash
+chown -R $UID:$GID /var/www
 composer install
 git config --global --add safe.directory /var/www
 exit
-docker compose
+```
 
 <span hidden>
 <details><summary></summary>
