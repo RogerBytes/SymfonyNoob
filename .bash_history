@@ -31,3 +31,6 @@ php bin/console make:controller HomeController
 symfony -m
 clear
 exit
+php bin/console make:controller RecipeController
+php bin/console debug:router
+exit

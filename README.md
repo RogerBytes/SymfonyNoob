@@ -84,7 +84,13 @@ Tout devrait être vert.
 ```bash
 PROJECT_NAME="SymfonyNoob"
 sudo systemctl start docker
+```
+
+```bash
 docker compose -p "${(L)PROJECT_NAME}" start
+```
+
+```bash
 docker compose -p "${(L)PROJECT_NAME}" stop
 ```
 
@@ -106,6 +112,12 @@ Les contrôleurs sont des classes, ont va les générer automatiquement avec les
 
 ```bash
 php bin/console make:controller HomeController
+```
+
+et pareil pour `HomeController`
+
+```bash
+php bin/console make:controller RecipeController
 ```
 
 <span hidden>
