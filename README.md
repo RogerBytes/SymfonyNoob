@@ -2,8 +2,7 @@
 
 <table><tr><td>
 
-Un projet personnel sur Symfony, me basant sur les cours vidéo de Grafikart. J'ai installé symfony cli également dans mon conteneur via `docker exec -it nginx_symfony_noob sh
-`.
+Un projet personnel sur Symfony, me basant sur les vidéos [Symfony 7 de Grafikart](https://youtu.be/1Fz6-Gkou-U). J'ai installé symfony cli également dans mon conteneur via `docker exec -it nginx_symfony_noob sh`.
 
 </td></tr></table>
 
@@ -35,15 +34,6 @@ sudo systemctl start docker
 docker compose -p "${(L)PROJECT_NAME}" --env-file .env.local up -d
 ```
 
-### Utilisation docker
-
-```bash
-PROJECT_NAME="SymfonyNoob"
-sudo systemctl start docker
-docker compose -p "${(L)PROJECT_NAME}" start
-docker compose -p "${(L)PROJECT_NAME}" stop
-```
-
 Pour arrêter tous les conteneurs de docker
 
 ```bash
@@ -58,30 +48,32 @@ Il faudra lancer ces commande unes fois par ordinateur.
 
 ```bash
 docker exec -it php_symfony_noob bash
-chown -R $UID:$GID /var/www
 composer install
-git config --global --add safe.directory /var/www
 exit
 ```
 
-### Installer symfony
+Et on installe la cli de symfony et droits d'accès
 
-Depuis [la page de téléchargement de Symfony](https://symfony.com/download), j'ai juste corrigé la commande sudo
+Depuis [la page de téléchargement de Symfony](https://symfony.com/download), j'ai juste corrigé la commande sudo, dans ce qui est fournit pour `alpine`
 On va lancer le shell du conteneur `php_symfony_noob` en root, le gestionnaire de paquet est ici `apk` et non `apt`.
 
 ```bash
+sudo chown -R $(id -u):$(id -g) "$(pwd)"
 docker exec -it -u root php_symfony_noob bash
-apk update
-apk add curl unzip bash
-curl -sS https://get.symfony.com/cli/installer | bash
-mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
-
-
-
+cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+git config --global --add safe.directory /var/www
 apk add --no-cache bash
 curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
-sudo apk add symfony-cli
+apk add symfony-cli
 ```
+
+Normalement tout est correctement installé.
+
+```bash
+symfony check:requirements
+```
+
+Tout devrait être vert.
 
 </div></details>
 
@@ -89,13 +81,18 @@ sudo apk add symfony-cli
 
 <details><summary class="button">🔍 Spoiler</summary><div class="spoiler">
 
-Pour travailler sur le projet, il faut se connecter à `php_symfony_noob`
+```bash
+PROJECT_NAME="SymfonyNoob"
+sudo systemctl start docker
+docker compose -p "${(L)PROJECT_NAME}" start
+docker compose -p "${(L)PROJECT_NAME}" stop
+```
+
+Pour travailler sur le projet, il faut se connecter à `php_symfony_noob`.
 
 On lance la stack docker.
 
-
-
-Et on se connecte au conteneur
+Et on se connecte au conteneur.
 
 ```bash
 docker exec -it php_symfony_noob bash
@@ -108,7 +105,7 @@ docker exec -it php_symfony_noob bash
 Les contrôleurs sont des classes, ont va les générer automatiquement avec les commande Symfony, ici on va faire `HomeController`, qui va gérer la page d'accueil.
 
 ```bash
-symfony make:controller HomeController
+php bin/console make:controller HomeController
 ```
 
 <span hidden>
