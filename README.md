@@ -43,17 +43,7 @@ docker ps
 
 ### Initialisation des droits du conteneur
 
-Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob`, on va donner les droits d'accès à la pile.
-Il faudra lancer ces commande unes fois par ordinateur.
-
-```bash
-docker exec -it php_symfony_noob bash
-composer install
-exit
-```
-
-Et on installe la cli de symfony et droits d'accès
-
+Il faudra lancer ces commande une fois par ordinateur.
 Depuis [la page de téléchargement de Symfony](https://symfony.com/download), j'ai juste corrigé la commande sudo, dans ce qui est fournit pour `alpine`
 On va lancer le shell du conteneur `php_symfony_noob` en root, le gestionnaire de paquet est ici `apk` et non `apt`.
 
@@ -65,12 +55,21 @@ git config --global --add safe.directory /var/www
 apk add --no-cache bash
 curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
 apk add symfony-cli
+exit
+```
+
+Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob`, on va donner les droits d'accès à la pile.
+
+```bash
+docker exec -it php_symfony_noob bash
+composer install
 ```
 
 Normalement tout est correctement installé.
 
 ```bash
 symfony check:requirements
+exit
 ```
 
 Tout devrait être vert.

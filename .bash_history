@@ -34,3 +34,14 @@ exit
 php bin/console make:controller RecipeController
 php bin/console debug:router
 exit
+composer install
+exit
+cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+git config --global --add safe.directory /var/www
+apk add --no-cache bash
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
+apk add symfony-cli
+exit
+composer install
+symfony check:requirements
+exit
