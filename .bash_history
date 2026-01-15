@@ -45,3 +45,6 @@ exit
 composer install
 symfony check:requirements
 exit
+clear
+exit
+exit
