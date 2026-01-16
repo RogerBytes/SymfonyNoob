@@ -79,65 +79,6 @@ Tout devrait être vert.
 
 </div></details>
 
-## Connexion au conteneur
-
-<details><summary class="button">🔍 Spoiler</summary><div class="spoiler">
-
-```bash
-PROJECT_NAME="SymfonyNoob"
-sudo systemctl start docker
-```
-
-```bash
-docker compose -p "${(L)PROJECT_NAME}" start
-```
-
-```bash
-docker compose -p "${(L)PROJECT_NAME}" stop
-```
-
-Pour travailler sur le projet, il faut se connecter à `php_symfony_noob`.
-
-On lance la stack docker.
-
-Et on se connecte au conteneur.
-
-```bash
-docker exec -it php_symfony_noob bash
-```
-
-</div></details>
-
-## Génération de contrôleurs
-
-Les contrôleurs sont des classes, ont va les générer automatiquement avec les commande Symfony, ici on va faire `HomeController`, qui va gérer la page d'accueil.
-
-```bash
-php bin/console make:controller HomeController
-```
-
-et pareil pour `HomeController`
-
-```bash
-php bin/console make:controller RecipeController
-```
-
-## Moteur de template TWIG
-
-Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`
-
-```twig
-{% extends "base.html.twig" %}
-
-{% block title %}
-Toute les recettes
-{% endblock %}
-
-{% block body %}
-lorem ccaca
-{% endblock %}
-```
-
 ## Installation de Bootstrap
 
 L'installation est détaillée ici
@@ -219,6 +160,67 @@ npm run build
 Voilà, Bootstrap est intégré à votre projet.
 
 </div></details>
+
+## Connexion au conteneur
+
+<details><summary class="button">🔍 Spoiler</summary><div class="spoiler">
+
+```bash
+PROJECT_NAME="SymfonyNoob"
+sudo systemctl start docker
+```
+
+```bash
+docker compose -p "${(L)PROJECT_NAME}" start
+```
+
+```bash
+docker compose -p "${(L)PROJECT_NAME}" stop
+```
+
+Pour travailler sur le projet, il faut se connecter à `php_symfony_noob`.
+
+On lance la stack docker.
+
+Et on se connecte au conteneur.
+
+```bash
+docker exec -it php_symfony_noob bash
+```
+
+</div></details>
+
+## Génération de contrôleurs
+
+Les contrôleurs sont des classes, ont va les générer automatiquement avec les commande Symfony, ici on va faire `HomeController`, qui va gérer la page d'accueil.
+
+```bash
+php bin/console make:controller HomeController
+```
+
+et pareil pour `HomeController`
+
+```bash
+php bin/console make:controller RecipeController
+```
+
+## Moteur de template TWIG
+
+Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`
+
+```twig
+{% extends "base.html.twig" %}
+
+{% block title %}
+Toute les recettes
+{% endblock %}
+
+{% block body %}
+lorem ccaca
+{% endblock %}
+```
+
+
 
 <span hidden>
 <details><summary></summary>
