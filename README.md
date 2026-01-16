@@ -55,8 +55,11 @@ git config --global --add safe.directory /var/www
 apk add --no-cache bash
 curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
 apk add symfony-cli
+apk add nodejs npm
 exit
 ```
+
+*Une partie de ces commandes, je les mettrais dans mon compose de docker*.
 
 Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob`, on va donner les droits d'accès à la pile.
 
@@ -117,6 +120,31 @@ et pareil pour `HomeController`
 
 ```bash
 php bin/console make:controller RecipeController
+```
+
+## Moteur de template TWIG
+
+Ils sont situés dans `template`, dans mon ``
+
+```twig
+{% extends "base.html.twig" %}
+
+{% block title %}
+Toute les recettes
+{% endblock %}
+
+{% block body %}
+lorem ccaca
+{% endblock %}
+```
+
+## Installation de Encore
+
+Je vais installer Encore, qui me permettra d'ajouter Bootstrap
+
+```bash
+composer require symfony/webpack-encore-bundle
+npm install
 ```
 
 <span hidden>

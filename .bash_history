@@ -48,3 +48,16 @@ exit
 clear
 exit
 exit
+~~~~~exit
+exit
+exit
+php bin/console d:r
+php bin/console debug:rooter
+php bin/console debug:router
+composer require symfony/webpack-encore-bundle
+npm install
+exit
+apk add nodejs npm -y
+apk add nodejs npm
+node -v && npm -v
+exit
