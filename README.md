@@ -161,7 +161,7 @@ Voilà, Bootstrap est intégré à votre projet.
 
 </div></details>
 
-## Connexion au conteneur
+## Démarrage et arrêt du conteneur
 
 <details><summary class="button">🔍 Spoiler</summary><div class="spoiler">
 
@@ -178,6 +178,10 @@ docker compose -p "${(L)PROJECT_NAME}" start
 docker compose -p "${(L)PROJECT_NAME}" stop
 ```
 
+</div></details>
+
+## Connexion au conteneur
+
 Pour travailler sur le projet, il faut se connecter à `php_symfony_noob`.
 
 On lance la stack docker.
@@ -187,8 +191,6 @@ Et on se connecte au conteneur.
 ```bash
 docker exec -it php_symfony_noob bash
 ```
-
-</div></details>
 
 ## Génération de contrôleurs
 
