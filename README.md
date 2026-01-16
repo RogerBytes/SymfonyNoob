@@ -133,7 +133,7 @@ import './styles/global.scss';
 import 'bootstrap';
 ```
 
-### Activer Sass
+### Activer Sass et popper
 
 Dans `webpack.config.js` il faut décommenter `//.enableSassLoader()`
 
@@ -144,6 +144,7 @@ Dans `webpack.config.js` il faut décommenter `//.enableSassLoader()`
 et on install la dépendance
 
 ```bash
+npm install @popperjs/core --save-dev
 npm install sass-loader@^16.0.1 sass --save-dev
 ```
 
@@ -208,17 +209,17 @@ php bin/console make:controller RecipeController
 
 ## Moteur de template TWIG
 
-Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`
+Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`, consulter [la doc de TWIG](https://twig.symfony.com/doc/3.x/).
 
 ```twig
 {% extends "base.html.twig" %}
 
 {% block title %}
-Toute les recettes
+Toutes les recettes
 {% endblock %}
 
 {% block body %}
-lorem ccaca
+lorem caca
 {% endblock %}
 ```
 

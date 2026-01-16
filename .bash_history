@@ -88,3 +88,7 @@ npm install
 npm run dev
 exit
 exit
+npm run dev
+npm install @popperjs/core --save-dev
+npm run dev
+exit

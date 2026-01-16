@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use PHPUnit\Util\PHP\Job;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +23,11 @@ final class RecipeController extends AbstractController
         return $this->render('recipe/show.html.twig', [
             'id' => $id,
             'slug' => $slug,
-            'demo'
+            'demo' => '<strong>bravo la démo</strong>',
+            'person' => [
+                'firstname' => 'John',
+                'lastname' => 'Doe'
+            ]
         ]);
     }
 }

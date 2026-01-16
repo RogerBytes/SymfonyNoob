@@ -15,17 +15,17 @@
     <body>
             <nav class="navbar navbar-expand-sm navbar-light bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Symfony Noob</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                    <a class="navbar-brand" href="{{ url('home') }}">Symfony Noob</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
                         aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarID">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url('home') }}">Home</a>
                         </div>
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="/recette">Recettes</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url('recipe.index') }}">Recettes</a>
                         </div>
                     </div>
                 </div>
