@@ -61,3 +61,29 @@ apk add nodejs npm -y
 apk add nodejs npm
 node -v && npm -v
 exit
+composer require symfony/webpack-encore-bundle
+npm install
+npm install bootstrap --save-dev
+exit
+npm run dev
+npm run dev
+clear
+npm run dev
+npm install @symfony/stimulus-bridge --save-dev
+clear
+exit$
+exit
+npm install @symfony/stimulus-bridge --save-dev
+clear
+npm run dev
+npm run dev
+clear
+npm run dev
+npm install sass-loader@^16.0.1 sass --save-dev
+npm run dev
+composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
+composer require symfony/webpack-encore-bundle symfony/ux-turbo symfony/stimulus-bundle
+npm install
+npm install
+npm run dev
+exit

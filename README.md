@@ -124,7 +124,7 @@ php bin/console make:controller RecipeController
 
 ## Moteur de template TWIG
 
-Ils sont situés dans `template`, dans mon ``
+Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`
 
 ```twig
 {% extends "base.html.twig" %}
@@ -138,14 +138,87 @@ lorem ccaca
 {% endblock %}
 ```
 
-## Installation de Encore
+## Installation de Bootstrap
 
-Je vais installer Encore, qui me permettra d'ajouter Bootstrap
+L'installation est détaillée ici
+
+<details><summary class="button">🔍 Spoiler</summary><div class="spoiler">
+
+### Installer Encore
+
+Je vais installer Encore, qui me permettra d'ajouter Bootstrap, je me base [sur cette partie de sa doc](https://symfony.com/doc/current/frontend.html#switch-from-assetmapper).
 
 ```bash
-composer require symfony/webpack-encore-bundle
+composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
+composer require symfony/webpack-encore-bundle symfony/ux-turbo symfony/stimulus-bundle
 npm install
 ```
+
+### Installation de Bootstrap avec npm
+
+Depuis [cette doc de Symfony pour Boootsrap](https://symfony.com/doc/current/frontend/encore/bootstrap.html).
+
+```bash
+npm install bootstrap --save-dev
+npm install @symfony/stimulus-bridge --save-dev
+```
+
+J'ai ajouté stimulus, un framework léger qui est proposé par symfony.
+
+### Ajout de l'import front
+
+Je créé un fichier `global.scss`
+
+```bash
+touch assets/styles/global.scss
+```
+
+et j'y mets
+
+```scss
+// assets/styles/global.scss
+
+// customize some Bootstrap variables
+// $primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+```
+
+On l'ajoute aussi dans `assets/app.js`
+
+```javascript
+import './styles/global.scss';
+import 'bootstrap';
+```
+
+### Activer Sass
+
+Dans `webpack.config.js` il faut décommenter `//.enableSassLoader()`
+
+```javascript
+.enableSassLoader()
+```
+
+et on install la dépendance
+
+```bash
+npm install sass-loader@^16.0.1 sass --save-dev
+```
+
+### Compilation
+
+```bash
+# développement - uà faire à chaque changement de SCSS ou de JS
+npm run dev
+# ou
+# production, avant chaque déploiement
+npm run build
+```
+
+Voilà, Bootstrap est intégré à votre projet.
+
+</div></details>
 
 <span hidden>
 <details><summary></summary>
