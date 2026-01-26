@@ -59,7 +59,7 @@ apk add nodejs npm
 exit
 ```
 
-*Une partie de ces commandes, je les mettrais dans mon compose de docker*.
+_Une partie de ces commandes, je les mettrais dans mon compose de docker_.
 
 Symfony est installé dans php, dans le conteneur `container_name: php_symfony_noob`, on va donner les droits d'accès à la pile.
 
@@ -129,8 +129,8 @@ et j'y mets
 On l'ajoute aussi dans `assets/app.js`
 
 ```javascript
-import './styles/global.scss';
-import 'bootstrap';
+import "./styles/global.scss";
+import "bootstrap";
 ```
 
 ### Activer Sass et popper
@@ -212,14 +212,14 @@ php bin/console make:controller RecipeController
 Ils sont situés dans `template`, dans mon `templates/recipe/index.html.twig`, consulter [la doc de TWIG](https://twig.symfony.com/doc/3.x/).
 
 ```twig
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
 {% block title %}
-Toutes les recettes
+    Toutes les recettes
 {% endblock %}
 
 {% block body %}
-lorem caca
+    lorem caca
 {% endblock %}
 ```
 
@@ -228,6 +228,10 @@ Pour afficher les routes (depuis le shell du conteneur)
 ```bash
 php bin/console debug:router
 ```
+
+## Où en suis-je
+
+5:22 de la video twig template Engine
 
 <span hidden>
 <details><summary></summary>
