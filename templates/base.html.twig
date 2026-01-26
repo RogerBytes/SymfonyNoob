@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <meta charset="UTF-8" />
+        <title>
+            {% block title %}
+                Welcome!
+            {% endblock %}
+        </title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>"
+        />
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -13,26 +20,49 @@
         {% endblock %}
     </head>
     <body>
-            <nav class="navbar navbar-expand-sm navbar-light bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="{{ url('home') }}">Symfony Noob</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
-                        aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarID">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="{{ url('home') }}">Home</a>
-                        </div>
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="{{ url('recipe.index') }}">Recettes</a>
-                        </div>
+        <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('home') }}">
+                    Symfony Noob
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarID"
+                    aria-controls="navbarID"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarID">
+                    <div class="navbar-nav">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="{{ url('home') }}"
+                        >
+                            Home
+                        </a>
+                    </div>
+                    <div class="navbar-nav">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="{{ url('recipe.index') }}"
+                        >
+                            Recettes
+                        </a>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
         <div class="container my-4">
-        {% block body %}{% endblock %}
+            {% block body %}
+
+            {% endblock %}
         </div>
     </body>
 </html>
