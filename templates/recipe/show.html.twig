@@ -1,13 +1,10 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title "Toutes les recettes" %}
+{% block title 'Toutes les recettes' %}
 
 {% block body %}
-  le slug : {{ slug }} et l'id : {{ id }} et demo {{ demo | raw }} et person {{ person.firstname ~ person.lastname }}
+    le slug : {{ slug }} et l'id : {{ id }} et demo {{ demo|raw }} et person {{ person.firstname
+        ~ person.lastname }}
 
-
-
-  <!-- Bouton pour ouvrir la modale -->
-
-
+    <!-- Bouton pour ouvrir la modale -->
 {% endblock %}
