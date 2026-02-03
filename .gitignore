@@ -6,6 +6,7 @@
 /public/bundles/
 /var/
 /vendor/
+/tes-sture/
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
