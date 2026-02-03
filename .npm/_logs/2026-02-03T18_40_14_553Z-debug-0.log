@@ -6,8 +6,8 @@
 5 silly config load:file:/etc/npmrc
 6 verbose title npm install
 7 verbose argv "install" "--force"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-03T10_16_29_075Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-03T10_16_29_075Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-03T18_40_14_553Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-03T18_40_14_553Z-debug-0.log
 10 warn using --force Recommended protections disabled.
 11 silly logfile start cleaning logs, removing 1 files
 12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
@@ -545,15 +545,11 @@
 16 silly audit   'yocto-queue': [ '0.1.0' ],
 16 silly audit   '@symfony/ux-turbo': [ '2.31.0' ]
 16 silly audit }
-17 http cache @rollup/rollup-linux-x64-gnu@https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.57.1.tgz 0ms (cache hit)
-18 silly tarball no local data for @rollup/rollup-linux-x64-gnu@https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.57.1.tgz. Extracting by manifest.
-19 http fetch GET 200 https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.57.1.tgz 209ms (cache miss)
-20 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 353ms
-21 silly audit report {}
-22 silly ADD node_modules/@rollup/rollup-linux-x64-gnu
-23 verbose cwd /var/www
-24 verbose os Linux 6.14.0-37-generic
-25 verbose node v24.13.0
-26 verbose npm  v11.6.3
-27 verbose exit 0
-28 info ok
+17 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 841ms
+18 silly audit report {}
+19 verbose cwd /var/www
+20 verbose os Linux 6.14.0-37-generic
+21 verbose node v24.13.0
+22 verbose npm  v11.6.3
+23 verbose exit 0
+24 info ok
