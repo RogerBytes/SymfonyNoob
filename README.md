@@ -50,6 +50,11 @@ On va lancer le shell du conteneur `php_symfony_noob` en root, le gestionnaire d
 ```bash
 sudo chown -R $(id -u):$(id -g) "$(pwd)"
 docker exec -it -u root php_symfony_noob bash
+```
+
+Et maintenant que l'on est connecté au conteneur
+
+```bash
 cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 git config --global --add safe.directory /var/www
 apk add --no-cache bash
@@ -158,7 +163,7 @@ npm run dev
 npm run build
 ```
 
-Voilà, Bootstrap est intégré à votre projet.
+Voilà, Bootstrap est intégré à votre projet (en cas de modification de Bootstrap, il faudra relancer ces commandes).
 
 </div></details>
 
