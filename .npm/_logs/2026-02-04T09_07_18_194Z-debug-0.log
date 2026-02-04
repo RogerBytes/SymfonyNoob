@@ -6,39 +6,39 @@
 5 silly config load:file:/etc/npmrc
 6 verbose title npm install sass-loader@^16.0.1 sass
 7 verbose argv "install" "sass-loader@^16.0.1" "sass" "--save-dev"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-03T10_18_29_647Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-03T10_18_29_647Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-04T09_07_18_194Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-04T09_07_18_194Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
-11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
-12 silly logfile done cleaning log files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
 13 silly idealTree buildDeps
 14 silly fetch manifest sass@^1.97.3
 15 silly packumentCache full:https://registry.npmjs.org/sass cache-miss
-16 http cache https://registry.npmjs.org/sass 76ms (cache hit)
+16 http fetch GET 200 https://registry.npmjs.org/sass 284ms (cache revalidated)
 17 silly packumentCache full:https://registry.npmjs.org/sass set size:722061 disposed:false
 18 silly fetch manifest sass-loader@^16.0.1
 19 silly packumentCache full:https://registry.npmjs.org/sass-loader cache-miss
-20 http fetch GET 200 https://registry.npmjs.org/sass-loader 117ms (cache updated)
-21 silly packumentCache full:https://registry.npmjs.org/sass-loader set size:undefined disposed:false
+20 http fetch GET 200 https://registry.npmjs.org/sass-loader 214ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/sass-loader set size:418964 disposed:false
 22 silly fetch manifest @rspack/core@0.x || 1.x
 23 silly packumentCache full:https://registry.npmjs.org/@rspack%2fcore cache-miss
-24 http fetch GET 200 https://registry.npmjs.org/@rspack%2fcore 108ms (cache updated)
+24 http fetch GET 200 https://registry.npmjs.org/@rspack%2fcore 254ms (cache updated)
 25 silly packumentCache full:https://registry.npmjs.org/@rspack%2fcore set size:undefined disposed:false
 26 silly fetch manifest @swc/helpers@>=0.5.1
 27 silly packumentCache full:https://registry.npmjs.org/@swc%2fhelpers cache-miss
-28 http fetch GET 200 https://registry.npmjs.org/@swc%2fhelpers 56ms (cache revalidated)
+28 http fetch GET 200 https://registry.npmjs.org/@swc%2fhelpers 58ms (cache revalidated)
 29 silly packumentCache full:https://registry.npmjs.org/@swc%2fhelpers set size:655395 disposed:false
 30 silly fetch manifest node-sass@^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
 31 silly packumentCache full:https://registry.npmjs.org/node-sass cache-miss
-32 http fetch GET 200 https://registry.npmjs.org/node-sass 33ms (cache revalidated)
+32 http fetch GET 200 https://registry.npmjs.org/node-sass 51ms (cache revalidated)
 33 silly packumentCache full:https://registry.npmjs.org/node-sass set size:494960 disposed:false
 34 silly fetch manifest sass-embedded@*
 35 silly packumentCache full:https://registry.npmjs.org/sass-embedded cache-miss
-36 http cache https://registry.npmjs.org/sass-embedded 2ms (cache hit)
+36 http fetch GET 200 https://registry.npmjs.org/sass-embedded 51ms (cache revalidated)
 37 silly packumentCache full:https://registry.npmjs.org/sass-embedded set size:407397 disposed:false
 38 silly fetch manifest webpack@^5.74.0
 39 silly packumentCache full:https://registry.npmjs.org/webpack cache-miss
-40 http fetch GET 200 https://registry.npmjs.org/webpack 74ms (cache updated)
+40 http fetch GET 200 https://registry.npmjs.org/webpack 129ms (cache updated)
 41 silly packumentCache full:https://registry.npmjs.org/webpack set size:undefined disposed:false
 42 silly placeDep ROOT sass@1.97.3 REPLACE for:  want: ^1.97.3
 43 silly placeDep ROOT sass-loader@16.0.6 REPLACE for:  want: ^16.0.1
@@ -574,7 +574,7 @@
 45 silly audit   sass: [ '1.97.3' ],
 45 silly audit   'sass-loader': [ '16.0.6' ]
 45 silly audit }
-46 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 289ms
+46 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 244ms
 47 silly audit report {}
 48 verbose cwd /var/www
 49 verbose os Linux 6.14.0-37-generic

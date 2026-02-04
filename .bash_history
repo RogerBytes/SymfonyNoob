@@ -154,3 +154,21 @@ npm install @symfony/stimulus-bridge --save-dev
 npm run dev
 npm run build
 exit
+cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+git config --global --add safe.directory /var/www
+apk add --no-cache bash
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
+apk add symfony-cli
+apk add nodejs npm
+exit
+composer install
+composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
+composer require symfony/webpack-encore-bundle symfony/ux-turbo symfony/stimulus-bundle
+npm install
+npm install bootstrap --save-dev
+npm install @symfony/stimulus-bridge --save-dev
+npm install @popperjs/core --save-dev
+npm install sass-loader@^16.0.1 sass --save-dev
+npm run dev
+npm run build
+exit

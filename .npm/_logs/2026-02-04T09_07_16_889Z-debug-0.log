@@ -6,15 +6,15 @@
 5 silly config load:file:/etc/npmrc
 6 verbose title npm install @popperjs/core
 7 verbose argv "install" "@popperjs/core" "--save-dev"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-03T10_18_22_700Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-03T10_18_22_700Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-04T09_07_16_889Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-04T09_07_16_889Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
 12 silly logfile done cleaning log files
 13 silly idealTree buildDeps
 14 silly fetch manifest @popperjs/core@^2.11.8
 15 silly packumentCache full:https://registry.npmjs.org/@popperjs%2fcore cache-miss
-16 http cache https://registry.npmjs.org/@popperjs%2fcore 79ms (cache hit)
+16 http cache https://registry.npmjs.org/@popperjs%2fcore 82ms (cache hit)
 17 silly packumentCache full:https://registry.npmjs.org/@popperjs%2fcore set size:579534 disposed:false
 18 silly placeDep ROOT @popperjs/core@2.11.8 REPLACE for:  want: ^2.11.8
 19 silly reify moves {}
@@ -549,7 +549,7 @@
 20 silly audit   '@symfony/ux-turbo': [ '2.31.0' ],
 20 silly audit   '@popperjs/core': [ '2.11.8' ]
 20 silly audit }
-21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 559ms
+21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 612ms
 22 silly audit report {}
 23 verbose cwd /var/www
 24 verbose os Linux 6.14.0-37-generic

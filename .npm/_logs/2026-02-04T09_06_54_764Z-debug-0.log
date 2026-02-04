@@ -4,23 +4,23 @@
 3 silly config load:file:/usr/lib/node_modules/npm/npmrc
 4 silly config load:file:/var/www/.npmrc
 5 silly config load:file:/etc/npmrc
-6 verbose title npm install @symfony/stimulus-bridge
-7 verbose argv "install" "@symfony/stimulus-bridge" "--save-dev"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-03T10_16_56_792Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-03T10_16_56_792Z-debug-0.log
+6 verbose title npm install bootstrap
+7 verbose argv "install" "bootstrap" "--save-dev"
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-04T09_06_54_764Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-04T09_06_54_764Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
 12 silly logfile done cleaning log files
 13 silly idealTree buildDeps
-14 silly fetch manifest @symfony/stimulus-bridge@^4.0.1
-15 silly packumentCache full:https://registry.npmjs.org/@symfony%2fstimulus-bridge cache-miss
-16 http fetch GET 200 https://registry.npmjs.org/@symfony%2fstimulus-bridge 208ms (cache revalidated)
-17 silly packumentCache full:https://registry.npmjs.org/@symfony%2fstimulus-bridge set size:54886 disposed:false
-18 silly fetch manifest @hotwired/stimulus@^3.0.0
-19 silly packumentCache full:https://registry.npmjs.org/@hotwired%2fstimulus cache-miss
-20 http fetch GET 200 https://registry.npmjs.org/@hotwired%2fstimulus 68ms (cache updated)
-21 silly packumentCache full:https://registry.npmjs.org/@hotwired%2fstimulus set size:undefined disposed:false
-22 silly placeDep ROOT @symfony/stimulus-bridge@4.0.1 REPLACE for:  want: ^4.0.1
+14 silly fetch manifest bootstrap@^5.3.8
+15 silly packumentCache full:https://registry.npmjs.org/bootstrap cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/bootstrap 277ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/bootstrap set size:577874 disposed:false
+18 silly fetch manifest @popperjs/core@^2.11.8
+19 silly packumentCache full:https://registry.npmjs.org/@popperjs%2fcore cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/@popperjs%2fcore 68ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/@popperjs%2fcore set size:579534 disposed:false
+22 silly placeDep ROOT bootstrap@5.3.8 REPLACE for:  want: ^5.3.8
 23 silly reify moves {}
 24 silly audit bulk request {
 24 silly audit   '@adobe/css-tools': [ '4.4.4' ],
@@ -208,6 +208,7 @@
 24 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.57.1' ],
 24 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.57.1' ],
 24 silly audit   '@sinclair/typebox': [ '0.34.47' ],
+24 silly audit   '@symfony/stimulus-bridge': [ '4.0.1' ],
 24 silly audit   '@symfony/webpack-encore': [ '5.3.1' ],
 24 silly audit   semver: [ '7.7.3', '6.3.1' ],
 24 silly audit   '@testing-library/dom': [ '10.4.1' ],
@@ -275,7 +276,6 @@
 24 silly audit   'baseline-browser-mapping': [ '2.9.14' ],
 24 silly audit   'big.js': [ '5.2.2' ],
 24 silly audit   boolbase: [ '1.0.0' ],
-24 silly audit   bootstrap: [ '5.3.8' ],
 24 silly audit   browserslist: [ '4.28.1' ],
 24 silly audit   'buffer-from': [ '1.1.2' ],
 24 silly audit   cac: [ '6.7.14' ],
@@ -551,9 +551,9 @@
 24 silly audit   'yargs-parser': [ '21.1.1' ],
 24 silly audit   'yocto-queue': [ '0.1.0' ],
 24 silly audit   '@symfony/ux-turbo': [ '2.31.0' ],
-24 silly audit   '@symfony/stimulus-bridge': [ '4.0.1' ]
+24 silly audit   bootstrap: [ '5.3.8' ]
 24 silly audit }
-25 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 196ms
+25 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 248ms
 26 silly audit report {}
 27 verbose cwd /var/www
 28 verbose os Linux 6.14.0-37-generic
