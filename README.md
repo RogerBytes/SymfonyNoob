@@ -4,6 +4,8 @@
 
 Un projet personnel sur Symfony, me basant sur les vidéos [Symfony 7 de Grafikart](https://youtu.be/1Fz6-Gkou-U). J'ai installé symfony cli également dans mon conteneur via `docker exec -it nginx_symfony_noob sh`.
 
+Le lien du localhost est <http://localhost:7800/> et pour CloudBeaver, c'est <>
+
 </td></tr></table>
 
 ## Initialisation après git clone
@@ -140,7 +142,7 @@ import "bootstrap";
 
 ### Activer Sass et popper
 
-Dans `webpack.config.js` il faut décommenter `//.enableSassLoader()`
+Dans `webpack.config.js` il faut dé-commenter `//.enableSassLoader()`
 
 ```javascript
 .enableSassLoader()

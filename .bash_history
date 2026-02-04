@@ -172,3 +172,4 @@ npm install sass-loader@^16.0.1 sass --save-dev
 npm run dev
 npm run build
 exit
+exit
