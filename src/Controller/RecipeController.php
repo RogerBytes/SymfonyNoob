@@ -14,7 +14,9 @@ final class RecipeController extends AbstractController
     #[Route('/recette', name: 'recipe.index')]
     public function index(Request $request): Response
     {
-        return $this->render('recipe/index.html.twig');
+        return $this->render('recipe/index.html.twig', [
+            'title' => 'Recettes',
+        ]);
     }
 
     // requirements est une option sup qui permet de specifier le format attendu sous forme d'une array (ici id et slug) dans l'URL

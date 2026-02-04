@@ -108,6 +108,7 @@ Depuis [cette doc de Symfony pour Boootsrap](https://symfony.com/doc/current/fro
 
 ```bash
 npm install bootstrap --save-dev
+npm install bootstrap-icons
 npm install @symfony/stimulus-bridge --save-dev
 ```
 
@@ -138,6 +139,7 @@ On l'ajoute aussi dans `assets/app.js`
 ```javascript
 import "./styles/global.scss";
 import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 ```
 
 ### Activer Sass et popper

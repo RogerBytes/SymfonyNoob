@@ -173,3 +173,8 @@ npm run dev
 npm run build
 exit
 exit
+npm install bootstrap-icons
+npm run dev
+npm run build
+npm run dev
+exit

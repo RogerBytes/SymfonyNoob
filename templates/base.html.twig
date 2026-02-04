@@ -19,41 +19,113 @@
         {% endblock %}
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+        <nav
+            class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-secondary"
+        >
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('home') }}">
-                    Symfony Noob
-                </a>
+                <span class="navbar-brand me-4">{{ site_name }}</span>
+                <span class="navbar-brand ms-2">{{ title }}</span>
                 <button
-                    class="navbar-toggler"
+                    class="navbar-toggler mb-2 mb-lg-0"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarID"
-                    aria-controls="navbarID"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarID">
-                    <div class="navbar-nav">
-                        <a
-                            class="nav-link active"
-                            aria-current="page"
-                            href="{{ url('home') }}"
-                        >
-                            Home
-                        </a>
-                    </div>
-                    <div class="navbar-nav">
-                        <a
-                            class="nav-link active"
-                            aria-current="page"
-                            href="{{ url('recipe.index') }}"
-                        >
-                            Recettes
-                        </a>
-                    </div>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            {# <li class="btn btn-outline-secondary"> #}
+                            <button
+                                class="dropdown-toggle text-white fw-bold btn btn-secondary"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Navigation
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Another action
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Something else here
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item dropdown">
+                            <button
+                                class="dropdown-toggle text-white fw-bold btn btn-secondary"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="mx-2">
+                                    <form class="d-flex" role="search">
+                                        <input
+                                            class="form-control me-2"
+                                            style="width:200px;"
+                                            type="search"
+                                            placeholder="Search"
+                                            aria-label="Search"
+                                        />
+                                        <button
+                                            class="btn btn-outline-success"
+                                            type="submit"
+                                        >
+                                            Search
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button
+                                class="dropdown-toggle text-white fw-bold btn btn-success"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Connexion
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Another action
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Something else here
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
