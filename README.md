@@ -24,7 +24,7 @@ DB_NAME="blog"
 SERVER_VERSION="16"
 USER_ID="${USER_ID}"
 GROUP_ID="${GROUP_ID}"
-DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@postgres:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=utf8"
+DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@database:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=utf8"
 EOF
 ```
 
@@ -236,6 +236,33 @@ Pour afficher les routes (depuis le shell du conteneur)
 
 ```bash
 php bin/console debug:router
+```
+
+## Avant Tp
+
+```bash
+php bin/console doctrine:database:create
+```
+
+## Tp login
+
+J'installe des bundles de Symfony
+
+```bash
+composer require symfony/twig-bundle
+composer require symfony/asset
+```
+
+### Authentification
+
+on fait un user
+
+```bash
+php bin/console make:user
+```
+
+```bash
+php bin/console make:security:form-login
 ```
 
 ## Où en suis-je
