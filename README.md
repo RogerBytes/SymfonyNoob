@@ -208,6 +208,7 @@ Les contrôleurs sont des classes, ont va les générer automatiquement avec les
 
 ```bash
 php bin/console make:controller HomeController
+php bin/console make:controller AdminController
 ```
 
 et pareil pour `HomeController`
@@ -242,6 +243,101 @@ php bin/console debug:router
 
 ```bash
 php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```
+
+Si souci avec la databe, pour tout supprimer et recommencer après avoir supprimer les migrations
+
+```bash
+php bin/console doctrine:database:drop --force
+```
+
+## Je créer commande
+
+```bash
+php bin/console make:command app:create-user
+```
+
+et `src/Command/CreateUserCommand.php`
+
+```php
+<?php
+
+namespace App\Command;
+
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+
+use App\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+
+#[AsCommand(
+    name: 'app:create-user',
+    description: 'Crée un utilisateur avec un mot de passe hashé et des rôles.',
+)]
+class CreateUserCommand extends Command
+{
+    public function __construct(
+        private readonly EntityManagerInterface $em,
+        private readonly UserPasswordHasherInterface $passwordHasher,
+    ) {
+        parent::__construct();
+    }
+
+    protected function configure(): void
+    {
+        $this
+            ->addArgument('email', InputArgument::REQUIRED, 'Email de l’utilisateur')
+            ->addArgument('password', InputArgument::REQUIRED, 'Mot de passe en clair (sera hashé)')
+            ->addArgument('roles', InputArgument::OPTIONAL, 'Rôles séparés par des virgules (ex: ROLE_ADMIN,ROLE_USER)', 'ROLE_USER')
+            ;
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+
+        $email = (string) $input->getArgument('email');
+        $plainPassword = (string) $input->getArgument('password');
+        $roleString = (string) $input->getArgument('roles');
+
+        // On découpe la chaîne "ROLE_ADMIN,ROLE_USER" en tableau ["ROLE_ADMIN", "ROLE_USER"]
+        $roles = array_map('trim', explode(',', $roleString));
+        $roles = array_values(array_filter($roles));
+
+        $user = new User();
+        $user->setEmail($email);
+        $user->setRoles($roles);
+
+        // Le mot de passe est hashé avant l’enregistrement.
+        $hashedPassword = $this->passwordHasher->hashPassword($user, $plainPassword);
+        $user->setPassword($hashedPassword);
+
+        // persist = Doctrine prépare l’insertion
+        // flush = Doctrine exécute réellement l’insertion en base
+        $this->em->persist($user);
+        $this->em->flush();
+
+        $output->writeln('Utilisateur créé : '.$email);
+        //$output->writeln('Voici le mot de passe : '.$plainPassword);
+        //$output->writeln('Voici le hash : '.$hashedPassword);
+        $output->writeln('Rôles : '.implode(', ', $roles));
+
+        return Command::SUCCESS;
+    }
+}
+```
+
+J'ai crée ainsi une commande personnalisé qui créer des Users
+
+```bash
+php bin/console app:create-user admin@site.test "admin123" "ROLE_ADMIN,ROLE_USER"
 ```
 
 ## Tp login
