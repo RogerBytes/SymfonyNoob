@@ -3,5 +3,12 @@
 {% block title 'Toutes les recettes' %}
 
 {% block body %}
-    Voilà ma page recettes
+    <h2>Liste des recettes</h2>
+
+    <ul>
+        <li>
+            <a href="{{ url('recipe.show', {id: 32, slug: 'pate-bolognaise'}) }}"> Pâtes bolognaises</a>
+        </li>
+    </ul>
+
 {% endblock %}
