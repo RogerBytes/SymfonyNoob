@@ -16,6 +16,7 @@ final class HomeController extends AbstractController
             'name' => $request->query->get('name', 'Inconnu'),
             'title' => 'Accueil',
             'site_name' => 'Recette FR',
+            'demo' => 'Grop <u>Triop</u>'
         ]);
     }
 }

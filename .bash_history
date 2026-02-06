@@ -213,3 +213,40 @@ npm run dev
 npm run build
 ext
 exit
+clear
+clear
+composer install
+yarn install
+yarn encore dev
+npm install
+php bin/console doctrine:database:create
+php bin/console doctrine:database:create
+php bin/console doctrine:database:create
+php bin/console doctrine:database:create
+php bin/console doctrine:database:create
+php bin/console doctrine:database:create
+USER_ID=$(id -u)
+GROUP_ID=$(id -g)
+cat <<EOF > .env.local
+DB_USER="root"
+DB_PASSWORD="root"
+DB_NAME="blog"
+SERVER_VERSION="16"
+USER_ID="${USER_ID}"
+GROUP_ID="${GROUP_ID}"
+DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@database:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=utf8"
+EOF
+
+php bin/console doctrine:database:create
+php bin/console app:create-user admin@site.test "admin123" "ROLE_ADMIN,ROLE_USER"
+php bin/console app:create-user admin@site.test "admin123" "ROLE_ADMIN,ROLE_USER"
+clear
+php bin/console app:create-user admin@site.test "admin123" "ROLE_ADMIN,ROLE_USER"
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+php bin/console app:create-user admin@site.test "admin123" "ROLE_ADMIN,ROLE_USER"
+php bin/console doctrine:database:drop --force
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+exit

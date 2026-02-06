@@ -239,6 +239,12 @@ Pour afficher les routes (depuis le shell du conteneur)
 php bin/console debug:router
 ```
 
+## Création des entités
+
+```bash
+php bin/console make:user
+```
+
 ## Avant Tp
 
 ```bash
@@ -247,7 +253,7 @@ php bin/console make:migration
 php bin/console doctrine:migrations:migrate
 ```
 
-Si souci avec la databe, pour tout supprimer et recommencer après avoir supprimer les migrations
+Si souci avec la database, pour tout supprimer et recommencer après avoir supprimer les migrations
 
 ```bash
 php bin/console doctrine:database:drop --force

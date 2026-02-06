@@ -5,22 +5,21 @@
 {% endblock %}
 
 {% block body %}
-    Ceci est la page d'accueil. C'est VSC qui prend le chou.
-{% endblock %}
-
-{% block content %}
-    <div class="container">
-        <h1>{{ title }}</h1>
-        {% if user %}
-            <p>
-                Bonjour {{ user.name }}
-            </p>
-        {% else %}
-            <p>
-                Non connecté
-            </p>
-        {% endif %}
-    </div>
+    Ceci est la page d'accueil. C'est VSC qui prend le chou {{ demo|raw }}.
+    {% block content %}
+        <div class="container">
+            <h1>{{ title }}</h1>
+            {% if user|default(false) %}
+                <p>
+                    Bonjour {{ user.name }}
+                </p>
+            {% else %}
+                <p>
+                    Non connecté
+                </p>
+            {% endif %}
+        </div>
+    {% endblock %}
 {% endblock %}
 
 {# {% extends 'base.html.twig' %}
