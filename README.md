@@ -384,9 +384,31 @@ vsix-dl klesun.deep-assoc-completion-vscode
 C'est l'extension VSCODE microsoft
 <https://marketplace.visualstudio.com/items?itemName=klesun.deep-assoc-completion-vscode>
 
+## Création d'entités
+
+```bash
+php bin/console make:entity
+```
+
+J'appelle l'entité `Recipe`.
+
+Pour les `new properties`, je mets `title` et je choisis le type `string` avec la longueur par défaut, et une deuxième propriété de type `text`, et une dernière propriété nommée `createdAt`, par défaut il reconnaît que c'est de type `datetime_immutable`, puis une propriété `updatedAt`.
+
+Si je souhaite ajouter d'autres properties à cette entité :
+
+```bash
+php bin/console make:entity Recipe
+```
+
+Il ne me reste plus qu'à lancer la migration
+
+```bash
+php bin/console make:migration
+```
+
 ## Où en suis-je
 
-5:22 de la video twig template Engine
+5:22 de la video twig template Engine.
 
 <span hidden>
 <details><summary></summary>
