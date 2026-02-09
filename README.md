@@ -367,6 +367,19 @@ php bin/console make:user
 php bin/console make:security:form-login
 ```
 
+## Extension
+
+```bash
+codium --install-extension cvergne.vscode-php-getters-setters-cv
+codium --install-extension bmewburn.vscode-intelephense-client
+codium --install-extension nadim-vscode.symfony-code-snippets
+codium --install-extension nadim-vscode.symfony-super-console
+codium --install-extension TheNouillet.symfony-vscodeDotENV
+codium --install-extension mikestead.dotenv
+codium --install-extension redhat.vscode-yaml
+codium --install-extension mblode.twig-language
+```
+
 ## Où en suis-je
 
 5:22 de la video twig template Engine
