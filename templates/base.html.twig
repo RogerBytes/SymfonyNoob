@@ -53,12 +53,12 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{{ path('home') }}">
+                                    <a class="dropdown-item {{ app.current_route == 'home' ? 'active' : ''}}" href="{{ path('home') }}">
                                         Accueil
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{{ path('recipe.index') }}">
+                                    <a class="dropdown-item {{ app.current_route starts with 'recipe.' ? 'active' : '' }}" href="{{ path('recipe.index') }}">
                                         Recettes
                                     </a>
                                 </li>
@@ -112,8 +112,8 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="{{ path('app_login') }}">
-                                        Connexion
+                                    <a class="dropdown-item" href="#">
+                                        Action
                                     </a>
                                 </li>
                                 <li>
@@ -123,9 +123,15 @@
                                 </li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li>
-                                    <a class="dropdown-item" href="{{ path('app_logout') }}"">
-                                        Déconnexion
-                                    </a>
+                                    {% if app.user %}
+                                        <a class="dropdown-item" href="{{ path('app_logout') }}">
+                                            Déconnexion
+                                        </a>
+                                    {% else %}
+                                        <a class="dropdown-item" href="{{ path('app_login') }}">
+                                            Connexion
+                                        </a>
+                                    {% endif %}
                                 </li>
                             </ul>
                         </li>

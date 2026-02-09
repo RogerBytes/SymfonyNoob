@@ -27,6 +27,8 @@ final class RecipeController extends AbstractController
         return $this->render('recipe/show.html.twig', [
             'id' => $id,
             'slug' => $slug,
+            'title' => 'Recettes',
+            'site_name' => 'Recette FR',
             'demo' => '<strong>bravo la démo</strong>',
             'person' => [
                 'firstname' => 'John',

@@ -9,9 +9,9 @@
     {% block content %}
         <div class="container">
             <h1>{{ title }}</h1>
-            {% if user|default(false) %}
+            {% if app.user %}
                 <p>
-                    Bonjour {{ user.name }}
+                    Bonjour petit lapin, tu es connecté
                 </p>
             {% else %}
                 <p>
