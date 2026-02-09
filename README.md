@@ -378,7 +378,11 @@ codium --install-extension TheNouillet.symfony-vscodeDotENV
 codium --install-extension mikestead.dotenv
 codium --install-extension redhat.vscode-yaml
 codium --install-extension mblode.twig-language
+vsix-dl klesun.deep-assoc-completion-vscode
 ```
+
+C'est l'extension VSCODE microsoft
+<https://marketplace.visualstudio.com/items?itemName=klesun.deep-assoc-completion-vscode>
 
 ## Où en suis-je
 
