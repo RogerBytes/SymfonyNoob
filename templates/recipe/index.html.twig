@@ -6,20 +6,10 @@
     <h2>Liste des recettes</h2>
 
     <ul>
+        {% for recipe in recipes %}
         <li>
-            <a
-                href="{{
-                path(
-                    'recipe.show',
-                    {
-                        id: 32,
-                        slug: 'pate-bolognaise'
-                    }
-                )
-                }}"
-            >
-                Pâtes bolognaises
-            </a>
+            <a href="{{ path('recipe.show', {id: recipe.id, slug: recipe.slug }) }}">{{ recipe.title }}</a>
         </li>
+        {% endfor %}
     </ul>
 {% endblock %}

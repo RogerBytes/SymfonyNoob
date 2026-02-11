@@ -420,7 +420,49 @@ ou en raccourci
 php bin/console d:m:m
 ```
 
-Ou au lieu
+### Erreur de migration
+
+Si redondance, par exemple
+
+```doctrine
+[error] Migration DoctrineMigrations\Version20260206144250 failed during Execution. Error: "An exception occurred while executing a query: SQLSTATE[42P07]: Duplicate table: 7 ERROR:  relation "user" already exists"
+```
+
+Ici le souci vient de la version `20260206144250` (la Next), je vais supprimer cette migration
+
+```bash
+rm -rf migrations/Version20260206144250.php
+```
+
+Je ne suis pas encore bien au carré avec les migrations.
+
+## Verifier état des migrations
+
+```bash
+php bin/console doctrine:migrations:status
+```
+
+## Modifier une entité après la migration
+
+On modifie l'entité `Recipe`
+
+```bash
+php bin/console make:entity Recipe
+```
+
+J'ai ajouté un paramètre `duration` à l'entité, de type int, et nullable, il fau t refaire le make migration
+
+```bash
+php bin/console m:migration
+```
+
+et on lance la migration
+
+```bash
+php bin/console d:m:m
+```
+
+J'ai ajouté deux entrée dans ma table recipe, et je vais faire mes ajout dans mon controller de Recipe, et en plus de l'argument de méthode index, j'y ajoute `RecipeRepository`
 
 ## Où en suis-je
 

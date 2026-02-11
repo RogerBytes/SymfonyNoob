@@ -253,3 +253,38 @@ exit
 exit
 clear
 exit
+php bin/console make:migration
+php bin/console d:m:m
+php bin/console doctrine:migrations:status
+php bin/console d:m:s
+php bin/console doctrine:migrations:status
+php bin/console d:m:s
+php bin/console doctrine:migrations:status
+php bin/console d:m:m
+php bin/console d:m:v 20260206144250 --add
+clear
+php bin/console doctrine:migrations:version 20260206144250 --add
+php bin/console d:m:m
+php bin/console doctrine:migrations:version 20260206144250 --add
+php bin/console doctrine:migrations:version Version20260206144250 --add
+php bin/console doctrine:migrations:version 20260206144250 --add
+php bin/console cache:clear
+php bin/console doctrine:migrations:version 20260206144250 --add
+php bin/console d:m:m
+php bin/console doctrine:migrations:status
+php bin/console d:m:m
+php bin/console make:entity Recipe
+php bon/console m:m
+php bin/console m:m
+php bin/console m:migration
+php bin/console d:m:m
+php bin/console make:entity Recipe
+php bin/console m:migration
+php bin/console d:m:m
+php bin/console make:entity Recipe
+php bin/console make:entity Recipe
+php bin/console m:migration
+php bin/console d:m:m
+php bin/console m:migration
+php bin/console d:m:m
+exit
