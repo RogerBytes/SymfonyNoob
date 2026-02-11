@@ -406,6 +406,22 @@ Il ne me reste plus qu'à lancer la migration
 php bin/console make:migration
 ```
 
+Cela génère un fichier php dans le repertoire `migrations`, en gros c'est une préparation de requête postgresql.
+
+On execute la migration avec
+
+```bash
+php bin/console doctrine:migration:migrate
+```
+
+ou en raccourci
+
+```bash
+php bin/console d:m:m
+```
+
+Ou au lieu 
+
 ## Où en suis-je
 
 5:22 de la video twig template Engine.
