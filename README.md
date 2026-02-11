@@ -420,7 +420,7 @@ ou en raccourci
 php bin/console d:m:m
 ```
 
-Ou au lieu 
+Ou au lieu
 
 ## Où en suis-je
 
