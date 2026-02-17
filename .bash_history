@@ -288,3 +288,5 @@ php bin/console d:m:m
 php bin/console m:migration
 php bin/console d:m:m
 exit
+composer install
+exit
