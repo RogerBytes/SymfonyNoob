@@ -77,6 +77,7 @@ Symfony est installé dans php, dans le conteneur `container_name: php_symfony_n
 ```bash
 docker exec -it php_symfony_noob bash
 composer install
+php bin/console doctrine:database:create
 ```
 
 Normalement tout est correctement installé.
@@ -252,7 +253,6 @@ php bin/console make:user
 ## Avant Tp
 
 ```bash
-php bin/console doctrine:database:create
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate
 ```
