@@ -21,7 +21,7 @@ cat <<EOF > .env.local
 DB_USER="root"
 DB_PASSWORD="root"
 DB_HOST_PORT="database:5432"
-DB_NAME="bdd_default"
+DB_NAME="default_db"
 SERVER_VERSION="16"
 CHARSET="utf8"
 USER_ID="${USER_ID}"
@@ -88,6 +88,12 @@ exit
 ```
 
 Tout devrait être vert.
+
+Dans CloudBeaver
+
+- Host : `database`
+- Port : `5432`
+- Database : `default_db`
 
 </div></details>
 

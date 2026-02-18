@@ -34,6 +34,7 @@ final class RecipeController extends AbstractController
             return $this->redirectToRoute('recipe.show', ['slug'=> $recipe->getSlug(), 'id' => $recipe->getId()]);
         }
         return $this->render('recipe/show.html.twig', [
+            'title' => 'Recettes',
             'site_name' => 'Recette FR',
             'recipe' => $recipe,
         ]);

@@ -49,6 +49,18 @@ class Recipe
         return $this;
     }
 
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): static
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
     public function getContent(): ?string
     {
         return $this->content;
@@ -93,18 +105,6 @@ class Recipe
     public function setDuration(?int $duration): static
     {
         $this->duration = $duration;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): static
-    {
-        $this->slug = $slug;
 
         return $this;
     }
