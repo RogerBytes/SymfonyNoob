@@ -24,7 +24,8 @@ DB_NAME="blog"
 SERVER_VERSION="16"
 USER_ID="${USER_ID}"
 GROUP_ID="${GROUP_ID}"
-DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@database:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=utf8"
+CHARSET="utf8mb4"
+DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@database:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=\${CHARSET}"
 EOF
 ```
 
