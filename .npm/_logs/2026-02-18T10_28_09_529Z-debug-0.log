@@ -6,15 +6,15 @@
 5 silly config load:file:/etc/npmrc
 6 verbose title npm install bootstrap-icons
 7 verbose argv "install" "bootstrap-icons"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-05T08_50_46_742Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-05T08_50_46_742Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-18T10_28_09_529Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-18T10_28_09_529Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
 12 silly logfile done cleaning log files
 13 silly idealTree buildDeps
 14 silly fetch manifest bootstrap-icons@^1.13.1
 15 silly packumentCache full:https://registry.npmjs.org/bootstrap-icons cache-miss
-16 http fetch GET 200 https://registry.npmjs.org/bootstrap-icons 179ms (cache revalidated)
+16 http fetch GET 200 https://registry.npmjs.org/bootstrap-icons 316ms (cache revalidated)
 17 silly packumentCache full:https://registry.npmjs.org/bootstrap-icons set size:178324 disposed:false
 18 silly placeDep ROOT bootstrap-icons@1.13.1 REPLACE for:  want: ^1.13.1
 19 silly reify moves {}
@@ -550,11 +550,35 @@
 20 silly audit   '@symfony/ux-turbo': [ '2.31.0' ],
 20 silly audit   'bootstrap-icons': [ '1.13.1' ]
 20 silly audit }
-21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 197ms
-22 silly audit report {}
-23 verbose cwd /var/www
-24 verbose os Linux 6.17.0-14-generic
-25 verbose node v24.13.0
-26 verbose npm  v11.6.3
-27 verbose exit 0
-28 info ok
+21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 231ms
+22 silly audit report {
+22 silly audit report   ajv: [
+22 silly audit report     {
+22 silly audit report       id: 1113214,
+22 silly audit report       url: 'https://github.com/advisories/GHSA-2g4f-4pwh-qvx6',
+22 silly audit report       title: 'ajv has ReDoS when using `$data` option',
+22 silly audit report       severity: 'moderate',
+22 silly audit report       vulnerable_versions: '<8.18.0',
+22 silly audit report       cwe: [Array],
+22 silly audit report       cvss: [Object]
+22 silly audit report     }
+22 silly audit report   ]
+22 silly audit report }
+23 silly packumentCache corgi:https://registry.npmjs.org/ajv cache-miss
+24 http cache https://registry.npmjs.org/ajv 4ms (cache hit)
+25 silly packumentCache corgi:https://registry.npmjs.org/ajv set size:463222 disposed:false
+26 silly packumentCache corgi:https://registry.npmjs.org/ajv-formats cache-miss
+27 silly packumentCache corgi:https://registry.npmjs.org/ajv-keywords cache-miss
+28 silly packumentCache corgi:https://registry.npmjs.org/schema-utils cache-miss
+29 http cache https://registry.npmjs.org/ajv-keywords 5ms (cache hit)
+30 silly packumentCache corgi:https://registry.npmjs.org/ajv-keywords set size:53509 disposed:false
+31 http cache https://registry.npmjs.org/ajv-formats 8ms (cache hit)
+32 silly packumentCache corgi:https://registry.npmjs.org/ajv-formats set size:63554 disposed:false
+33 http cache https://registry.npmjs.org/schema-utils 9ms (cache hit)
+34 silly packumentCache corgi:https://registry.npmjs.org/schema-utils set size:76871 disposed:false
+35 verbose cwd /var/www
+36 verbose os Linux 6.17.0-14-generic
+37 verbose node v24.13.0
+38 verbose npm  v11.6.3
+39 verbose exit 0
+40 info ok

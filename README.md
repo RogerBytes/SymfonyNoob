@@ -21,9 +21,9 @@ cat <<EOF > .env.local
 DB_USER="root"
 DB_PASSWORD="root"
 DB_HOST_PORT="database:5432"
-DB_NAME="bdd-default"
+DB_NAME="bdd_default"
 SERVER_VERSION="16"
-CHARSET="utf8mb4"
+CHARSET="utf8"
 USER_ID="${USER_ID}"
 GROUP_ID="${GROUP_ID}"
 

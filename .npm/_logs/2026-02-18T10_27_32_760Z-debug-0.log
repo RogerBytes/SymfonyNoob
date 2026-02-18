@@ -6,11 +6,11 @@
 5 silly config load:file:/etc/npmrc
 6 verbose title npm install
 7 verbose argv "install"
-8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-05T08_50_30_801Z-
-9 verbose logfile /var/www/.npm/_logs/2026-02-05T08_50_30_801Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2026-02-18T10_27_32_760Z-
+9 verbose logfile /var/www/.npm/_logs/2026-02-18T10_27_32_760Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
-11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
-12 silly logfile done cleaning log files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
 13 silly idealTree buildDeps
 14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: vendor/symfony/ux-turbo/assets
 15 silly reify moves {}
@@ -546,11 +546,35 @@
 16 silly audit   'yocto-queue': [ '0.1.0' ],
 16 silly audit   '@symfony/ux-turbo': [ '2.31.0' ]
 16 silly audit }
-17 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 674ms
-18 silly audit report {}
-19 verbose cwd /var/www
-20 verbose os Linux 6.17.0-14-generic
-21 verbose node v24.13.0
-22 verbose npm  v11.6.3
-23 verbose exit 0
-24 info ok
+17 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 805ms
+18 silly audit report {
+18 silly audit report   ajv: [
+18 silly audit report     {
+18 silly audit report       id: 1113214,
+18 silly audit report       url: 'https://github.com/advisories/GHSA-2g4f-4pwh-qvx6',
+18 silly audit report       title: 'ajv has ReDoS when using `$data` option',
+18 silly audit report       severity: 'moderate',
+18 silly audit report       vulnerable_versions: '<8.18.0',
+18 silly audit report       cwe: [Array],
+18 silly audit report       cvss: [Object]
+18 silly audit report     }
+18 silly audit report   ]
+18 silly audit report }
+19 silly packumentCache corgi:https://registry.npmjs.org/ajv cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/ajv 154ms (cache miss)
+21 silly packumentCache corgi:https://registry.npmjs.org/ajv set size:undefined disposed:false
+22 silly packumentCache corgi:https://registry.npmjs.org/ajv-formats cache-miss
+23 silly packumentCache corgi:https://registry.npmjs.org/ajv-keywords cache-miss
+24 silly packumentCache corgi:https://registry.npmjs.org/schema-utils cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/schema-utils 69ms (cache miss)
+26 silly packumentCache corgi:https://registry.npmjs.org/schema-utils set size:undefined disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/ajv-keywords 170ms (cache miss)
+28 silly packumentCache corgi:https://registry.npmjs.org/ajv-keywords set size:undefined disposed:false
+29 http fetch GET 200 https://registry.npmjs.org/ajv-formats 195ms (cache miss)
+30 silly packumentCache corgi:https://registry.npmjs.org/ajv-formats set size:undefined disposed:false
+31 verbose cwd /var/www
+32 verbose os Linux 6.17.0-14-generic
+33 verbose node v24.13.0
+34 verbose npm  v11.6.3
+35 verbose exit 0
+36 info ok
