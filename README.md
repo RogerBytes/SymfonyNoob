@@ -20,12 +20,15 @@ GROUP_ID=$(id -g)
 cat <<EOF > .env.local
 DB_USER="root"
 DB_PASSWORD="root"
-DB_NAME="blog"
+DB_HOST_PORT="database:5432"
+DB_NAME="bdd-default"
 SERVER_VERSION="16"
+CHARSET="utf8mb4"
 USER_ID="${USER_ID}"
 GROUP_ID="${GROUP_ID}"
-CHARSET="utf8mb4"
-DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@database:5432/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=\${CHARSET}"
+
+
+DATABASE_URL="postgresql://\${DB_USER}:\${DB_PASSWORD}@\${DB_HOST_PORT}/\${DB_NAME}?serverVersion=\${SERVER_VERSION}&charset=\${CHARSET}"
 EOF
 ```
 
