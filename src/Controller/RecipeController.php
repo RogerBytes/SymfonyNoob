@@ -17,7 +17,7 @@ final class RecipeController extends AbstractController
     public function index(Request $request, RecipeRepository $repository, EntityManagerInterface $em): Response
     {
         $recipes = $repository->findWithDurationLowerThan(500);
-        $recipes[0]->setTitle('Pâtes bolognaise blup blup');
+        $recipes[0]->setTitle('Pâtes bolognaise');
         $em->flush();
         return $this->render('recipe/index.html.twig', [
             'title' => 'Recettes',
