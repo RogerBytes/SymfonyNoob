@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
+use PHPUnit\Util\PHP\Job;
 use App\Repository\RecipeRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use PHPUnit\Util\PHP\Job;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 final class RecipeController extends AbstractController
 {
@@ -17,7 +17,8 @@ final class RecipeController extends AbstractController
     public function index(Request $request, RecipeRepository $repository, EntityManagerInterface $em): Response
     {
         $recipes = $repository->findWithDurationLowerThan(500);
-        $recipes[0]->setTitle('Pâtes bolognaise');
+        // $recipes[0]->setTitle('Riz Cantoche');
+        $recipe = new Recipe();
         $em->flush();
         return $this->render('recipe/index.html.twig', [
             'title' => 'Recettes',
